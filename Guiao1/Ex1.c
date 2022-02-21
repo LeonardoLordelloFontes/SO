@@ -20,8 +20,8 @@ int main (int argc, char *argv[]) {
     }
     char c;
     int n;
-    while((n = read(sfd, &c, sizeof(char)) > 0)) {
-        write(dfd, &c, sizeof(char));    
+    while((n = read(sfd, &c, 1) > 0)) {
+        write(dfd, &c, 1);    
     }
     close(sfd);
     close(dfd);
