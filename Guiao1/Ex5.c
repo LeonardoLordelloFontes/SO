@@ -27,9 +27,7 @@ int main (int argc, char *argv[]) {
         fprintf(stderr, "usage: %s [FILE]\n", argv[0]);
         return 1;
     }
-    
     int fd = 0;
-    
     if (argc == 2) {
         fd = open(argv[1], O_RDONLY);
     }
@@ -37,10 +35,8 @@ int main (int argc, char *argv[]) {
         perror(argv[1]);
         return 1;
     }
-    
     char buffer[128], n_buffer[32];
     int bytes, counter = 1;
-    
     while ((bytes = readln(fd, buffer, 128)) > 0) {
         sprintf(n_buffer, "%6d  ", counter);
         write(1, n_buffer, 8);
@@ -48,5 +44,6 @@ int main (int argc, char *argv[]) {
         write(1, "\n", 1);
         counter++;
     }
+    close(1);
     return 0;
 }
