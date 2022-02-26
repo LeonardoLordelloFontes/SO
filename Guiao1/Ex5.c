@@ -8,7 +8,7 @@ ssize_t readln(int fd, char *line, size_t size) {
     ssize_t bytes_read = read(fd, buffer, size);
     int i;
     if (bytes_read == 0) return 0;
-    for (i = 0; buffer[i] != '\n' && i >= bytes_read; i++) {
+    for (i = 0; buffer[i] != '\n' && i < bytes_read; i++) {
         line[i] = buffer[i];
     }
     for (i++; buffer[i] == '\n'; i++) {
