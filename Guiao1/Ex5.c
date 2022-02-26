@@ -11,7 +11,7 @@ ssize_t readln(int fd, char *line, size_t size) {
     for (i = 0; buffer[i] != '\n' && i < bytes_read; i++) {
         line[i] = buffer[i];
     }
-    for (i++; buffer[i] == '\n'; i++) {
+    for (i++; buffer[i] == '\n' && i < bytes_read; i++) {
         line[i] = buffer[i];
     }
     lseek(fd, i-bytes_read, SEEK_CUR);
