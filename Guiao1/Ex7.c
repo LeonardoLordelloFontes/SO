@@ -89,7 +89,7 @@ int main(int argc, char* argv[]) {
 		}
 		if (n == -1)
 			fprintf(stderr, "something went wrong while reading the file");
-		if (counter >= atoi(argv[2]))
+		if (counter <= atoi(argv[2]))
 			fprintf(stderr, "register doesn't exist\n");
 		
 		close(fd);
