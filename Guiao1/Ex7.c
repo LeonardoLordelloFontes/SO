@@ -87,11 +87,13 @@ int main(int argc, char* argv[]) {
 			}
 			counter++;
 		}
-		if (counter >= atoi(argv[2])) {
+		if (n == -1)
+			fprintf(stderr, "something went wrong while reading the file");
+		if (counter >= atoi(argv[2]))
 			fprintf(stderr, "register doesn't exist\n");
-			close(fd);
-			return 1;
-		}
+		
+		close(fd);
+		return 1;
 	}
 	
 	// APENAS PARA TESTES, MOSTRA O CONTEÚDO DOS REGISTOS
