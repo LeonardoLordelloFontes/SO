@@ -3,6 +3,9 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// PRECISO MODIFICAR ESTE FICHEIRO
+
 ssize_t readln(int fd, char *line, size_t size) {
     char buffer[size];
     ssize_t bytes_read = read(fd, buffer, size);
