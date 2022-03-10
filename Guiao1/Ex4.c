@@ -35,5 +35,7 @@ int main (int argc, char *argv[]) {
         write(1, "\n", 1);
         counter++;
     }
+    if (bytes == -1)
+        fprintf(stderr, "something went wrong while reading the file");
     return 0;
 }
