@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 		char buffer[32];
 		int size = snprintf(buffer, 32, "o número %d foi encontrado\n", atoi(argv[1]));
 		write(1, buffer, size);
-    }
+    	}
     	else {
 		char buffer[64];
 		int size = snprintf(buffer, 64, "o número %d NÃO foi encontrado\n", atoi(argv[1]));
