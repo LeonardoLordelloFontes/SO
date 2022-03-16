@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     
     for (int i = 0; i < LINHAS; i++) {
     	wait(&status);
-    	if (WEXITSTATUS(status)) 
+    	if (WEXITSTATUS(status) || !WIFEXITED(status)) 
             break;
     }
     
