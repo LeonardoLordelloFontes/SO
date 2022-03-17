@@ -62,12 +62,14 @@ int main(int argc, char *argv[]) {
 				size += snprintf(buffer + size, sizeof(buffer) - size, "%d ", i); 
 		}
 		size += snprintf(buffer + size, sizeof(buffer) - size, "\n");
-		write(1, buffer, size);
+		if (write(1, buffer, size) == -1)
+			return 1;
     	}
     	else {
 		char buffer[64];
 		int size = snprintf(buffer, 64, "o número %d NÃO foi encontrado\n", atoi(argv[1]));
-		write(1, buffer, size);
+		if (write(1, buffer, size) == -1)
+			return 1;
 	}
     }
     
