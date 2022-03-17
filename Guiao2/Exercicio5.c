@@ -9,7 +9,7 @@
 #define RANGE 50
 
 int** getRandomIntMatriz(int linhas, int colunas, int range) {
-    int** matriz = malloc(sizeof(int) * linhas);
+    int** matriz = malloc(sizeof(int*) * linhas);
     srand(time(NULL));
 
     for (int i = 0; i < linhas; i++) {
