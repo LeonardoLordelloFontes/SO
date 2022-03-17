@@ -6,7 +6,7 @@
 
 #define LINHAS 10
 #define COLUNAS 1000
-#define RANGE 500
+#define RANGE 5000
 
 int** getRandomIntMatriz(int linhas, int colunas, int range) {
     int** matriz = malloc(sizeof(int*) * linhas);
