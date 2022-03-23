@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// Refazer depois com funções organizadas e o .h
+
 struct Pessoa {
 	int idade;
 	char nome[256];
@@ -112,7 +114,7 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 	
-	// Como eu coloquei os return 0 dentro dos if's, se chegar aqui é erro
+	// Como eu coloquei os return 0 dentro dos if's, se chegar aqui é "erro"
 	
 	fprintf(stderr, "usage: %s FLAG name age", argv[0]);
 	close(fd);
