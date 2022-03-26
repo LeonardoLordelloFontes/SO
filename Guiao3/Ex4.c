@@ -35,6 +35,6 @@ int mySystem(char * executable) {
 }
 
 int main(int argc, char *argv[]) {
-	char buffer[32] = "ls -l";
+	char buffer[32] = "ls -l"; // Just an example
 	return mySystem(buffer);
 }
