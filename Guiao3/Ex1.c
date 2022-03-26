@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-	execl("/bin/ls", "ls", "-l", NULL);
+	execlp("ls", "ls", "-l", NULL);
 	perror("ls");
 	return 1;
 }
